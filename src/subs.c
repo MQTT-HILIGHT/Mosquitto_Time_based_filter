@@ -122,7 +122,7 @@ static int _subs_process(struct mosquitto_db *db, struct _mosquitto_subhier *hie
 		}
 	}
 	while(source_id && leaf){
-		printf("%d %d %d %d!!\n",getTickCount(), leaf->time, leaf->time_filter, (leaf->context->is_bridge && !strcmp(leaf->context->id, source_id)));
+		//printf("%d %d %d %d!!\n",getTickCount(), leaf->time, leaf->time_filter, (leaf->context->is_bridge && !strcmp(leaf->context->id, source_id)));
 		if((tmp_time = getTickCount()) - leaf->time < leaf->time_filter*10 || !leaf->context->id || (leaf->context->is_bridge && !strcmp(leaf->context->id, source_id))){
 			leaf = leaf->next;
 			continue;
@@ -477,7 +477,7 @@ int mqtt3_sub_add(struct mosquitto_db *db, struct mosquitto *context, const char
 		subhier = subhier->next;
 	}
 	if(!subhier){
-		printf("언제 실행되니?\n");
+		//printf("언제 실행되니?\n");
 		child = _mosquitto_malloc(sizeof(struct _mosquitto_subhier));
 		if(!child){
 			_sub_topic_tokens_free(tokens);
