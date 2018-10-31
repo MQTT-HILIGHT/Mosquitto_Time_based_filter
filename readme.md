@@ -6,6 +6,16 @@ Mosquitto is an open source implementation of a server for version 3.1 and
 the `mosquitto_pub` and `mosquitto_sub` utilities for publishing and
 subscribing.
 
+## Video
+
+### System Verification
+
+* <https://youtu.be/FYh58sWFABA>
+
+### Performance Verification with existing mosquitto v1.4.15
+
+* <https://youtu.be/bTzUoN61QBw>  If you want to see the results right away, watch 02:40
+
 ## Links
 
 See the following links for more information on MQTT:
